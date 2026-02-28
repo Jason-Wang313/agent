@@ -139,7 +139,7 @@ def run_simulator(
     model: str = "deepseek-chat",
 ) -> None:
     import os
-    api_key = os.environ.get("DEEPSEEK_API_KEY", "sk-015f1c970ffc4abcb14f398c5c71c017")
+    api_key = os.environ.get("DEEPSEEK_API_KEY")
 
     context = build_session_context(persona_path=persona_path)
     messages: list[dict] = [{"role": "system", "content": context.system_prompt}]
